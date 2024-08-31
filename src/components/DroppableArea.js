@@ -19,7 +19,7 @@ const DroppableArea = ({ id, left, top, onDrop }) => {
         left: `${left}px`,
         top: `${top}px`,
         position: 'absolute',
-        backgroundColor: isOver ? 'lightgreen' : 'rgba(255, 255, 255, 0.5)',
+        backgroundColor: isOver ? 'rgba(1,14,31,10)' : 'rgba(255, 255, 255, 0.5)',
       }}
     />
   );
