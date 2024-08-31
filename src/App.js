@@ -27,11 +27,19 @@ const CIRCLES = [
   { id: 'circle5', x: 295, y: 650 },
 ];
 
+const NUMBERS = [
+  { id: 'number1', name: '1', x: 235, y: 285 },
+  { id: 'number2', name: '2', x: 455, y: 285 },
+  { id: 'number3', name: '3', x: 520, y: 485 },
+  { id: 'number4', name: '4', x: 350, y: 615 },
+  { id: 'number5', name: '5', x: 175, y: 485 },
+  { id: 'spawn', name: 'spawn', x: 225, y: 585 },];
+
 function App() {
   const [positions, setPositions] = useState(
     SYMBOLS.map((symbol, index) => ({
       ...symbol,
-      position: { x: -400, y: 150 + index * 120 }, // Default positions, adjusted for left alignment
+      position: { x: -200, y: 150 + index * 120 }, // Default positions, adjusted for left alignment
     }))
   );
 
@@ -57,7 +65,7 @@ function App() {
     setPositions(
       SYMBOLS.map((symbol, index) => ({
         ...symbol,
-        position: { x: -400, y: 150 + index * 120 }, // Default positions, adjusted for left alignment
+        position: { x: -200, y: 150 + index * 120 }, // Default positions, adjusted for left alignment
       }))
     );
   };
@@ -78,6 +86,21 @@ function App() {
               top={circle.y}
               onDrop={handleDrop}
             />
+          ))}
+          {NUMBERS.map((number) => (
+            <div
+              key={number.id}
+              style={{
+                position: 'absolute',
+                left: `${number.x}px`,
+                top: `${number.y}px`,
+                color: 'white',
+                fontSize: '24px',
+                fontWeight: 'bold',
+              }}
+            >
+              {number.name}
+            </div>
           ))}
           <div className="symbols-container">
             {positions.map((symbol) => (
