@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/plom/static/css/main.98d37f30.css",
-    "main.js": "/plom/static/js/main.7fec5f86.js",
+    "main.css": "/plom/static/css/main.602fd553.css",
+    "main.js": "/plom/static/js/main.7bae1ac5.js",
     "static/js/453.41268518.chunk.js": "/plom/static/js/453.41268518.chunk.js",
     "static/media/layout.png": "/plom/static/media/layout.32f9e11102b98f21ed7e.png",
     "static/media/fenturio.jpg": "/plom/static/media/fenturio.4cfd4f5aba303daa9db1.jpg",
@@ -9,12 +9,12 @@
     "static/media/2eye.png": "/plom/static/media/2eye.151737f2ae401a03a768.png",
     "static/media/5heart.png": "/plom/static/media/5heart.1067e3b9be23e814a5d3.png",
     "index.html": "/plom/index.html",
-    "main.98d37f30.css.map": "/plom/static/css/main.98d37f30.css.map",
-    "main.7fec5f86.js.map": "/plom/static/js/main.7fec5f86.js.map",
+    "main.602fd553.css.map": "/plom/static/css/main.602fd553.css.map",
+    "main.7bae1ac5.js.map": "/plom/static/js/main.7bae1ac5.js.map",
     "453.41268518.chunk.js.map": "/plom/static/js/453.41268518.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.98d37f30.css",
-    "static/js/main.7fec5f86.js"
+    "static/css/main.602fd553.css",
+    "static/js/main.7bae1ac5.js"
   ]
 }
