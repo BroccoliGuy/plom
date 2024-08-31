@@ -33,7 +33,7 @@ const NUMBERS = [
   { id: 'number3', name: '3', x: 520, y: 485 },
   { id: 'number4', name: '4', x: 350, y: 615 },
   { id: 'number5', name: '5', x: 175, y: 485 },
-  { id: 'spawn', name: 'spawn', x: 225, y: 585 },];
+];
 
 function App() {
   const [positions, setPositions] = useState(
@@ -103,13 +103,44 @@ function App() {
             </div>
           ))}
           <div className="symbols-container">
-            {positions.map((symbol) => (
+            {positions.map((symbol, index) => (
               <DraggableSymbol
                 key={symbol.id}
                 symbol={symbol}
                 left={symbol.position.x}
                 top={symbol.position.y}
               />
+            ))}
+          </div>
+          <div className="symbols-horizontal">
+            <div className="symbols-order-label">Symbol Order</div>
+            {positions.map((symbol, index) => (
+              <div
+                key={symbol.id}
+                style={{
+                  position: 'relative',
+                  display: 'inline-block',
+                  marginLeft: '10px',
+                }}
+              >
+                <img
+                  src={symbol.src}
+                  alt={symbol.id}
+                  style={{ width: '75%', height: '75%' }}
+                />
+                <div
+                  style={{
+                    position: 'absolute',
+                    bottom: '5px',
+                    left: '5px',
+                    color: 'white',
+                    fontSize: '18px',
+                    fontWeight: 'bold',
+                  }}
+                >
+                  {index + 1}
+                </div>
+              </div>
             ))}
           </div>
         </div>

@@ -43,6 +43,21 @@ body {
   left: 10px; /* Adjust this value to set the left margin */
 }
 
+.symbols-horizontal {
+  position: fixed;
+  top: 2%;
+  right: 1%;
+  background: rgba(7, 7, 7, 0.5);
+  border: 2px solid #ccc;
+}
+
+.symbols-order-label {
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+
+}
+
 .draggable-symbol {
   width: 100px;
   height: 100px;
@@ -51,17 +66,20 @@ body {
 
 .reset-button {
   position: fixed;
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: #7590ac;
+  top: 50px;
+  left: 20%;
+  background-color: transparent;
   color: white;
-  border: none;
+  border: 2px solid #ccc;
   border-radius: 5px;
   padding: 10px 20px;
   font-size: 16px;
   cursor: pointer;
   z-index: 1;
+}
+
+.reset-button:hover {
+  background-color: #080c1c;
 }
 
 .droppable-area {
