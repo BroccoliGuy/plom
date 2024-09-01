@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { DndProvider } from 'react-dnd';
 import { HTML5Backend } from 'react-dnd-html5-backend';
+import { TbScanPosition } from 'react-icons/tb'; // Importer l'icône
 import './App.css';
 import DraggableSymbol from './components/DraggableSymbol';
 import DroppableArea from './components/DroppableArea';
@@ -33,6 +34,7 @@ const NUMBERS = [
   { id: 'number3', name: '3', x: 520, y: 485 },
   { id: 'number4', name: '4', x: 350, y: 615 },
   { id: 'number5', name: '5', x: 175, y: 485 },
+  { id: 'spawn', name: 'spawn', x: 200, y: 600 },
 ];
 
 const VERTICAL_DROP_AREAS = [
@@ -120,8 +122,14 @@ function App() {
                 color: 'white',
                 fontSize: '24px',
                 fontWeight: 'bold',
+                textAlign: 'center',
               }}
             >
+              {number.id === 'spawn' && (
+                <div style={{ marginTop: '0px' }}>
+                  <TbScanPosition size={50} color="white" />
+                </div>
+              )}
               {number.name}
             </div>
           ))}
@@ -161,4 +169,3 @@ function App() {
 }
 
 export default App;
-
