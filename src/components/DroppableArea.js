@@ -2,7 +2,7 @@ import React from 'react';
 import { useDrop } from 'react-dnd';
 import PropTypes from 'prop-types';
 
-const DroppableArea = ({ id, left, top, onDrop, className, customStyles }) => {
+const DroppableArea = ({ id, left, top, onDrop, className = '', customStyles = {} }) => {
   const [{ isOver }, drop] = useDrop({
     accept: 'symbol',
     drop: (item) => onDrop(item.id, id),
@@ -32,11 +32,6 @@ DroppableArea.propTypes = {
   onDrop: PropTypes.func.isRequired,
   className: PropTypes.string,
   customStyles: PropTypes.object,  // Ajouter les styles personnalisés
-};
-
-DroppableArea.defaultProps = {
-  className: '',
-  customStyles: {},  // Par défaut, aucun style supplémentaire
 };
 
 export default DroppableArea;
