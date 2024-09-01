@@ -35,6 +35,14 @@ const NUMBERS = [
   { id: 'number5', name: '5', x: 175, y: 485 },
 ];
 
+const VERTICAL_DROP_AREAS = [
+  { id: 'v-drop1', x: -200, y: 150 },
+  { id: 'v-drop2', x: -200, y: 270 },
+  { id: 'v-drop3', x: -200, y: 390 },
+  { id: 'v-drop4', x: -200, y: 510 },
+  { id: 'v-drop5', x: -200, y: 630 },
+];
+
 function App() {
   const [positions, setPositions] = useState(
     SYMBOLS.map((symbol, index) => ({
@@ -44,7 +52,7 @@ function App() {
   );
 
   const handleDrop = (id, circleId) => {
-    const circle = CIRCLES.find((c) => c.id === circleId);
+    const circle = CIRCLES.find((c) => c.id === circleId) || VERTICAL_DROP_AREAS.find((v) => v.id === circleId);
     const symbol = SYMBOLS.find((s) => s.id === id);
 
     if (circle && symbol) {
@@ -85,6 +93,21 @@ function App() {
               left={circle.x}
               top={circle.y}
               onDrop={handleDrop}
+            />
+          ))}
+          {VERTICAL_DROP_AREAS.map((dropArea) => (
+            <DroppableArea
+              key={dropArea.id}
+              id={dropArea.id}
+              left={dropArea.x}
+              top={dropArea.y}
+              onDrop={handleDrop}
+              className="square-droppable-area"
+              customStyles={{
+                backgroundColor: 'rgba(1,14,31, 0.4)',  // Exemple de personnalisation
+                border: '2px solid #ccc',
+                borderRadius: '0', // Carré
+              }}
             />
           ))}
           {NUMBERS.map((number) => (
@@ -138,3 +161,4 @@ function App() {
 }
 
 export default App;
+

@@ -23,6 +23,7 @@ const DraggableSymbol = ({ symbol, left, top }) => {
         position: 'absolute',
         opacity: isDragging ? 0.5 : 1,
         cursor: 'move',
+        zIndex: "1",
       }}
     />
   );
