@@ -32,6 +32,7 @@ body {
   transform: translate(-50%, -50%);
   width: 100%;
   max-width: 100%;
+  box-shadow: 5px 4px 15px rgba(1,14,31, 0.1); /* Ombre pour donner un effet de profondeur */
 }
 
 .symbols-container {
@@ -58,11 +59,13 @@ body {
 
 }
 
-.draggable-symbol {
+.draggable-symbol img {
   width: 100px;
   height: 100px;
-  cursor: move;
+  box-shadow: 0 0 0 3px #ccc; /* Simule une bordure de 3px */
+  border-radius: 5px; /* Optionnel : Pour arrondir les coins si souhaité */
 }
+
 
 .reset-button {
   position: fixed;

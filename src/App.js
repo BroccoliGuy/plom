@@ -103,7 +103,7 @@ function App() {
             </div>
           ))}
           <div className="symbols-container">
-            {positions.map((symbol, index) => (
+            {positions.map((symbol) => (
               <DraggableSymbol
                 key={symbol.id}
                 symbol={symbol}
@@ -114,7 +114,7 @@ function App() {
           </div>
           <div className="symbols-horizontal">
             <div className="symbols-order-label">Symbol Order</div>
-            {positions.map((symbol, index) => (
+            {positions.map((symbol) => (
               <div
                 key={symbol.id}
                 style={{
@@ -128,18 +128,6 @@ function App() {
                   alt={symbol.id}
                   style={{ width: '75%', height: '75%' }}
                 />
-                <div
-                  style={{
-                    position: 'absolute',
-                    bottom: '5px',
-                    left: '5px',
-                    color: 'white',
-                    fontSize: '18px',
-                    fontWeight: 'bold',
-                  }}
-                >
-                  {index + 1}
-                </div>
               </div>
             ))}
           </div>
